@@ -7,6 +7,7 @@
 * [hello](code/hello/index.html)
 * [响应式的声明式渲染](code/intro/reactive/index.html)
 * [v-bind](code/intro/bind/index.html)
+* [处理用户输入](code/intro/event/index.html)
 
 # 简介
 ## 声明式渲染
