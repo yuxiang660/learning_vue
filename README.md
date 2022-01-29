@@ -8,6 +8,7 @@
 * [响应式的声明式渲染](code/intro/reactive/index.html)
 * [v-bind](code/intro/bind/index.html)
 * [处理用户输入](code/intro/event/index.html)
+* [处理用户输入-表单](code/intro/input/index.html)
 
 # 简介
 ## 声明式渲染
@@ -29,4 +30,8 @@ Vue.js的核心是一个允许采用简洁的模板语法来声明式地将数�
     * 例如[v-bind](code/intro/bind/index.html)例子中的`v-bind:title="message"`就绑定了[index.js](code/intro/bind/index.js)中的`vm.message`
 
 ## 处理用户输入
+* 通过`v-on`的方式，可以添加一个事件监听器
+    * 例如[处理用户输入](code/intro/event/index.html)例子中的`v-bind:click="reverseMessage"`就将按钮的click动作和[index.js](code/intro/event/index.js)中的`vm.reverseMessage`绑定了
+* 通过`v-model`的方式，实现表单输入和应用状态之间的双向绑定
+    * 例如[处理用户输入-表单](code/intro/input/index.html)例子中的`v-model="message"`将input输入表单的内容和[index.js](code/intro/input/index.js)中的`vm.message`绑定，而`vm.message`又通过`{{ }}`的方式和`<p>`标签的内容绑定
 

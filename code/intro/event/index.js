@@ -15,4 +15,4 @@ const App = {
 }
 
 const vm = Vue.createApp(App).mount('#event-handling')
-console.log(vm.message)
+console.log(vm.reverseMessage)
