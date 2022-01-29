@@ -11,4 +11,5 @@ const App = {
    }
 }
 
-Vue.createApp(App).mount('#counter_div')
+const vm = Vue.createApp(App).mount('#counter_div')
+console.log(vm.counter) // => 0

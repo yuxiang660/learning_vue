@@ -21,5 +21,11 @@ Vue.js的核心是一个允许采用简洁的模板语法来声明式地将数�
   Node是一个接口interface，主要描述了节点的基本方法和属性，如父节点，子节点的操作。
   参考网址：[参考1](https://stackoverflow.com/questions/31467031/whats-the-difference-between-node-element-object)，[参考2](https://github.com/chenshenhai/blog/issues/34)
 
+有两种方式建立DOM和数据的关联：
+* 通过`{{ }}`的方式，将DOM的内容和Vue中的数据相关联
+    * 例如[响应式的声明式渲染](code/intro/reactive/index.html)例子中的`{{ counter }}`就绑定了[index.js](code/intro/reactive/index.js)中的`vm.counter`
+* 通过`v-bind`的方式，将DOM的属性和Vue中的数据相关联
+    * 例如[v-bind](code/intro/bind/index.html)例子中的`v-bind:title="message"`就绑定了[index.js](code/intro/bind/index.js)中的`vm.message`
+
 ## 处理用户输入
 

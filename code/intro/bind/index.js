@@ -6,4 +6,5 @@ const App = {
    }
 }
 
-Vue.createApp(App).mount('#bind-attribute')
+const vm = Vue.createApp(App).mount('#bind-attribute')
+console.log(vm.message) // => You loaded ...
