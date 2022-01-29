@@ -7,8 +7,10 @@
 * [hello](code/hello/index.html)
 * [响应式的声明式渲染](code/intro/reactive/index.html)
 * [v-bind](code/intro/bind/index.html)
-* [处理用户输入](code/intro/event/index.html)
-* [处理用户输入-表单](code/intro/input/index.html)
+* [处理用户输入v-on](code/intro/event/index.html)
+* [处理用户输入表单v-model](code/intro/input/index.html)
+* [条件v-if](code/intro/v-if/index.html)
+* [循环v-for](code/intro/v-for/index.html)
 
 # 简介
 ## 声明式渲染
@@ -35,3 +37,15 @@ Vue.js的核心是一个允许采用简洁的模板语法来声明式地将数�
 * 通过`v-model`的方式，实现表单输入和应用状态之间的双向绑定
     * 例如[处理用户输入-表单](code/intro/input/index.html)例子中的`v-model="message"`将input输入表单的内容和[index.js](code/intro/input/index.js)中的`vm.message`绑定，而`vm.message`又通过`{{ }}`的方式和`<p>`标签的内容绑定
 
+## 条件与循环
+到现在为止，我们知道了不同的数据绑定方式：
+* 通过`{{ }}`可以把数据绑定到DOM文本
+* 通过`v-bind`可以把数据绑定到DOM的attribute
+* 通过`v-on`可以把数据绑定到用户的输入事件
+* 通过`v-model`可以把数据绑定到用户的输入内容
+
+这一章，我们将介绍两种绑定方式，可以将数据绑定到DOM的结构：
+* 通过`v-if`可以把数据绑定到DOM是否显示
+    * 例如[条件v-if](code/intro/v-if/index.html)例子中的`v-if="seen"`将`<span>`标签是否显示和[index.js](code/intro/v-if/index.js)中的`vm.seen`绑定
+* 通过`v-for`可以绑定数组的数据来渲染一个项目列表
+    * 例如[循环v-for](code/intro/v-for/index.html)例子中的`v-for="todo in todos"`将[index.js](code/intro/v-for/index.js)中的`vm.todos`数组展开，并由`<li>`标签显示
