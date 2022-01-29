@@ -12,10 +12,10 @@
 ## 声明式渲染
 Vue.js的核心是一个允许采用简洁的模板语法来声明式地将数据渲染进[DOM](https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model/Introduction)的系统。
 
-> 什么是DOM？
+> 什么是DOM？<br>
   DOM(Document Object Model，文档对象模型)是HTML和XML文档的编程接口。DOM 将文档解析为一个由节点和对象（包含属性和方法的对象）组成的结构集合。简言之，它会将web页面和脚本或程序语言连接起来。
 
-> HTML标记，Element，Node之间是什么关系？
+> HTML标记，Element，Node之间是什么关系？<br>
   HTML标记实现了各种不同类型的DOM对象，以便于JS操作。
   Element是对接口Node的实现，是所有文档对象DOM的基类。实现了Node接口的操作，如节点的增删改查；扩展了Node的属性操作，例如className和attribute操作。
   Node是一个接口interface，主要描述了节点的基本方法和属性，如父节点，子节点的操作。
