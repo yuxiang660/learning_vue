@@ -59,3 +59,64 @@ Vue.js的核心是一个允许采用简洁的模板语法来声明式地将数�
 * 局部注册
     * 例如[组件局部注册](code/intro/comp_local/index.html)例子中，`todo-item`组件通过`components:{}`的形式往根组件`RootComponent`中添加，因此只有根组件可见
 
+# 应用&组件实例
+## 创建一个应用实例
+```js
+const app = Vue.createApp({
+    /* 选项 */
+})
+```
+* 允许链式配置
+```js
+Vue.createApp({})
+    .component('SearchInput', SearchInputComponent)
+    .directive('focus', FocusDirective)
+    .use(LocalePlugin)
+```
+
+## 根组件
+* 传递给createApp的选项用于配置**根组件**
+* 当我们挂载应用时，根组件被用作渲染的起点
+```js
+const RootComponent = { 
+    /* 选项 */ 
+}
+const app = Vue.createApp(RootComponent)
+const vm = app.mount('#app')
+```
+* `mount`不返回应用本身，而返回的是根组件实例
+
+## 组件实例property
+* `data`property
+    * `data`中定义的property通过组件实例暴露
+```js
+const app = Vue.createApp({
+    data() {
+        return { count: 4 }
+    }
+})
+
+const vm = app.mount('#app')
+console.log(vm.count) // => 4
+```
+* 常见property：methods, props, computed, inject, setup
+* Vue组件实例暴露了一些内置property，如`$attrs`和`$emit`。这些property都有一个`$`前缀，以避免与用户定义的property名冲突
+
+## 生命周期钩子
+```js
+Vue.createApp({
+    data() {
+        return { count: 1}
+    },
+    created() {
+        // `this` 指向 vm 实例
+        console.log('count is: ' + this.count) // => "count is: 1"
+    }
+})
+```
+* 生命周期钩子的`this`上下文指向调用它的当前活动实例，即`mount`后返回的vm实例
+* 不要在选项property或回调上使用箭头函数，例如`created: () => console.log(this.a)`，因为箭头函数没有`this`
+
+## 生命周期图示
+![vue_lifecycle](pictures/vue_lifecycle.svg)
+
