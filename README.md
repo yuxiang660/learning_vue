@@ -53,5 +53,9 @@ Vue.js的核心是一个允许采用简洁的模板语法来声明式地将数�
     * 例如[循环v-for](code/intro/v-for/index.html)例子中的`v-for="todo in todos"`将[index.js](code/intro/v-for/index.js)中的`vm.todos`数组展开，并由`<li>`标签显示
 
 ## 组件化应用构建
-
+组件(Component)是Vue里面的一个重要概念，允许我们使用小型、独立和通常可复用的组件构建大型应用。组件有两种注册方法：
+* 全局注册
+    * 例如[组件全局注册](code/intro/comp_global/index.html)例子中，`user-todo-items`组件通过`app.component`函数注册后，就可以在HTML中和其他标签一样使用了。组件的DOM内容由`template`定义，并且可以通过`props`传递数据
+* 局部注册
+    * 例如[组件局部注册](code/intro/comp_local/index.html)例子中，`todo-item`组件通过`components:{}`的形式往根组件`RootComponent`中添加，因此只有根组件可见
 
