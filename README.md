@@ -11,6 +11,8 @@
 * [处理用户输入表单v-model](code/intro/input/index.html)
 * [条件v-if](code/intro/v-if/index.html)
 * [循环v-for](code/intro/v-for/index.html)
+* [组件内部构造](code/intro/component/index.html)
+* [组件外部构造](code/intro/comp_props/index.html)
 
 # 简介
 ## 声明式渲染
@@ -49,3 +51,7 @@ Vue.js的核心是一个允许采用简洁的模板语法来声明式地将数�
     * 例如[条件v-if](code/intro/v-if/index.html)例子中的`v-if="seen"`将`<span>`标签是否显示和[index.js](code/intro/v-if/index.js)中的`vm.seen`绑定
 * 通过`v-for`可以绑定数组的数据来渲染一个项目列表
     * 例如[循环v-for](code/intro/v-for/index.html)例子中的`v-for="todo in todos"`将[index.js](code/intro/v-for/index.js)中的`vm.todos`数组展开，并由`<li>`标签显示
+
+## 组件化应用构建
+
+

@@ -1,0 +1,15 @@
+<html>
+
+<head>
+   <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<div id="list-rendering">
+   <ol>
+      <user-todo-items v-for="item in groceryList" v-bind:todo="item"></user-todo-items>
+   </ol>
+</div>
+
+<script src="index.js"></script>
+
+</html>
