@@ -11,8 +11,8 @@
 * [处理用户输入表单v-model](code/intro/input/index.html)
 * [条件v-if](code/intro/v-if/index.html)
 * [循环v-for](code/intro/v-for/index.html)
-* [组件内部构造](code/intro/component/index.html)
-* [组件外部构造](code/intro/comp_props/index.html)
+* [组件局部注册](code/intro/comp_local/index.html)
+* [组件全局注册](code/intro/comp_global/index.html)
 
 # 简介
 ## 声明式渲染
