@@ -13,7 +13,7 @@
 * [循环v-for](code/intro/v-for/index.html)
 * [组件局部注册](code/intro/comp_local/index.html)
 * [组件全局注册](code/intro/comp_global/index.html)
-* [方法](code/property/method/index.html)
+* [方法](code/property/methods/index.html)
 
 # 简介
 ## 声明式渲染
@@ -224,9 +224,11 @@ const app = Vue.createApp({
 })
 ```
 * Vue自动为`methods`绑定 this，以便于它始终指向组件实例。
-    * 例如在[方法](code/property/method/index.html)例子中，`vm.increment`是`methods`中定义的方法
+    * 例如在[方法](code/property/methods/index.html)例子中，`vm.increment`是`methods`中定义的方法
     * 在定义`methods`时应避免使用箭头函数
 * 这些`methods`和组件实例的其它所有property一样可以在组件的模板中被访问
     * `<button @click="increment">Up vote</button>`
+
+# 计算属性和侦听器
 
 
