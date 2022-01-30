@@ -13,8 +13,8 @@
 * [循环v-for](code/intro/v-for/index.html)
 * [组件局部注册](code/intro/comp_local/index.html)
 * [组件全局注册](code/intro/comp_global/index.html)
-* [方法](code/property/methods/index.html)
-* [计算属性](code/property/computed/index.html)
+* [方法](code/option/methods/index.html)
+* [计算属性](code/option/computed/index.html)
 
 # 简介
 ## 声明式渲染
@@ -225,11 +225,18 @@ const app = Vue.createApp({
 })
 ```
 * Vue自动为`methods`绑定 this，以便于它始终指向组件实例。
-    * 例如在[方法](code/property/methods/index.html)例子中，`vm.increment`是`methods`中定义的方法
+    * 例如在[方法](code/option/methods/index.html)例子中，`vm.increment`是`methods`中定义的方法
     * 在定义`methods`时应避免使用箭头函数
 * 这些`methods`和组件实例的其它所有property一样可以在组件的模板中被访问
     * `<button @click="increment">Up vote</button>`
 
 # 计算属性和侦听器
+计算属性类似于data property，用于data property的简单运算。虽然它的定义和`methods`类似，但是它在实例中的表现和data更接近。
+* 例如[计算属性](code/option/computed/index.html)例子中，`vm.calculateBooksMessage`打印的是function，而`vm.publishedBooksMessage`打印的却是"Yes"
+* 虽然例子中，`{{ publishedBooksMessage }}`和`{{ calculateBooksMessage（） }}`能达到相同的效果。然而，不同的是**计算属性将基于它们的响应依赖关系缓存**。而调用方法当重新渲染时，会被触发。
+
+## 侦听器
+计算属性实现了对数据的监听动作，但Vue提供了`watch`选项，一种更通用的响应数据变化的方法。
+
 
 
