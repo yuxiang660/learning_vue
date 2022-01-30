@@ -120,3 +120,111 @@ Vue.createApp({
 ## 生命周期图示
 ![vue_lifecycle](pictures/vue_lifecycle.svg)
 
+# 模板语法
+
+## 插值
+### 文本
+* `<span>Message: {{ msg }}</span>`
+### 原始HTML
+* `v-html`会直接作为HTML输出，而忽略数据绑定
+### Attribute
+* 双大括号语法不能再HTML attribute中使用，需要`v-bind`指令绑定HTML attribute
+
+## 指令
+指令(Directives)是带有`v-`前缀的特殊attribute。指令attribute的值预期是单个JavaScript表达式(除了v-for和v-on)。指令的职责是：
+* 当表达式的值改变时，将其产生的连带影响，响应式地作用于DOM。
+### 参数
+一些指令能够接收一个参数，在指令名称之后以冒号表示。
+* `<a v-bind:href="url"> ... </a>`
+    * 告知v-bind指令将该元素的href attribute与表达式url的值绑定
+* `<a v-on:click="doSomething"> ... </a>`
+    * 监听DOM事件click
+### 动态参数
+指令的参数可用用`[]`包裹，进行动态求值
+* `<a v-bind:[attributeName]="url"> ... </a>`
+    * 如果你的组件实例有一个data property attributeName，其值为"href"，那么这个绑定将等价于`v-bind:href`
+* `<a v-on:[eventName]="doSomething"> ... </a>`
+    * 当eventName的值为"focus" 时，`v-on:[eventName]`将等价于`v-on:focus`
+### 修饰符
+修饰符(modifier)是以半角句号`.`指明的特殊后缀，用于指出一个指令应该以特殊方式绑定
+* `<form v-on:submit.prevent="onSubmit">...</form>`
+    * `.prevent`修饰符告诉`v-on`指令对于触发的事件调用`event.preventDefault()`
+
+## 缩写
+* `v-bind`缩写：`:`
+    * `<a v-bind:href="url"> ... </a>`
+    * `<a :href="url"> ... </a>`
+    * `<a :[key]="url"> ... </a>`
+* `v-on`缩写：`@`
+    * `<a v-on:click="doSomething"> ... </a>`
+    * `<a @click="doSomething"> ... </a>`
+    * `<a @[event]="doSomething"> ... </a>`
+
+# Data Property和方法
+## Data Property
+组件的data选项是一个函数。Vue会在创建新组件实例的过程中调用此函数。它应该返回一个对象，然后Vue会通过响应性系统将其包裹起来，并以$data的形式存储在组件实例中。为方便起见，该对象的任何顶级property也会直接通过组件实例暴露出来：
+```js
+const app = Vue.createApp({
+  data() {
+    return { count: 4 }
+  }
+})
+
+const vm = app.mount('#app')
+
+console.log(vm.$data.count) // => 4
+console.log(vm.count)       // => 4
+
+// 修改 vm.count 的值也会更新 $data.count
+vm.count = 5
+console.log(vm.$data.count) // => 5
+
+// 反之亦然
+vm.$data.count = 6
+console.log(vm.count) // => 6
+```
+* Vue使用`$`前缀通过组件实例暴露自己的内置API。它还为内部property保留`_`前缀。你应该避免使用这两个字符开头的的顶级data property名称
+
+## 方法
+我们用`methods`选项向组件实例添加方法，它应该是一个包含所需方法的对象：
+```js
+const app = Vue.createApp({
+  data() {
+    return { count: 4 }
+  },
+  methods: {
+    increment() {
+      // `this` 指向该组件实例
+      this.count++
+    }
+  }
+})
+
+const vm = app.mount('#app')
+
+console.log(vm.count) // => 4
+
+vm.increment()
+
+console.log(vm.count) // => 5
+```
+当面的代码等价于：
+```js
+const app = Vue.createApp({
+  data: function() {
+    return { count: 4 }
+  },
+  methods: {
+    increment: function() {
+      // `this` 指向该组件实例
+      this.count++
+    }
+  }
+})
+```
+* Vue自动为`methods`绑定 this，以便于它始终指向组件实例。
+    * 在定义`methods`时应避免使用箭头函数
+* 这些`methods`和组件实例的其它所有property一样可以在组件的模板中被访问
+    * `<button @click="increment">Up vote</button>`
+
+

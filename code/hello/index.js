@@ -1,5 +1,5 @@
 const HelloVueApp = {
-   data() {
+   data: function() {
       return {
          message: 'Hello Vue!!'
       }
