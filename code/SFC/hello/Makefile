@@ -6,6 +6,9 @@ serve:
 build:
 	vue build hello.vue
 
+lib:
+	vue build hello.vue --target lib --name Hello --dest lib
+
 clean:
-	rm -rf dist node_modules
+	rm -rf dist node_modules lib
 
