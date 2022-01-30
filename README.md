@@ -269,7 +269,16 @@ Vue单文件组件（又名 *.vue 文件，缩写为SFC，single-file-component�
 * `<template>`部分定义了组件的模板。
 * `<style>`部分定义了与此组件关联的CSS。
 
-### 工作原理
+[SFC_hello](code/SFC/hello)例子中，创建了一个简单的SFC例子：
+* make serve
+    * 开启一个网页服务，用于展示网页
+* make build
+    * 编译出本地的网页，会读入`hello.vue`和`index.html`两个文件进行分析，生成`dist`文件夹
+    * `vue.config.js`指定了相对路径，这样进入`dist`文件夹显示网页
+* make lib
+    * 编译`hello.vue`文件，在`lib`文件夹下产生对应的JS component文件
+    * 在`lib`文件夹下还会产生简单的`index.html`文件，这样这个index文件不同于上一级的index文件
+
 
 
 
