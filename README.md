@@ -14,6 +14,7 @@
 * [组件局部注册](code/intro/comp_local/index.html)
 * [组件全局注册](code/intro/comp_global/index.html)
 * [方法](code/property/methods/index.html)
+* [计算属性](code/property/computed/index.html)
 
 # 简介
 ## 声明式渲染
