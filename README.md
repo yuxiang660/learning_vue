@@ -240,7 +240,17 @@ const app = Vue.createApp({
 计算属性实现了对数据的监听动作，但Vue提供了`watch`选项，一种更通用的响应数据变化的方法。
 
 # Props
+Props是组件暴露的数据接口，用户可以在组件内自定义各种Prop，这样父组件就可以传递数据到子组件，从而实现组件的更好复用。
 
 ## 传递静态或动态的Prop
+例子[props选项](code/option/props/index.html)中实现了三种不同的传递Prop的方法:
+* 静态传递
+    * `<blog-post prop-c="This is static assignment"></blog-post>`
+* 动态传递个别Prop
+    * `<blog-post :prop-b="post.propB" :prop-c="post.propC"></blog-post>`
+* 动态传递整体Prop
+    * `<blog-post v-bind="post"></blog-post>`
 
+> 如何关闭firefox的cross origin检测？<br>
+  由于使用了`import/export`，在HTML中加载JS文件时需要指定type是module，因此浏览器会报cross origin错误。一个解决办法是通过`python3 -m http.server`起一个server。另一个办法是关闭浏览器的安全检测，火狐浏览器中输入`about:config`，配置如下：about:config -> security.fileuri.strict_origin_policy -> false，[参考网址](https://stackoverflow.com/questions/17088609/disable-firefox-same-origin-policy)
 
