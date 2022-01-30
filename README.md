@@ -238,5 +238,8 @@ const app = Vue.createApp({
 ## 侦听器
 计算属性实现了对数据的监听动作，但Vue提供了`watch`选项，一种更通用的响应数据变化的方法。
 
+# Props
+
+## 传递静态或动态的Prop
 
 
