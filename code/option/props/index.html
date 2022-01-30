@@ -5,14 +5,14 @@
 </head>
 
 <div id="props-test">
-   <h1>整体传入动态probs:</h1>
+   <h1>Passing dynamic all probs:</h1>
    <blog-post v-bind="post"></blog-post>
-   <h1>分别传入动态probB和probC:</h1>
+   <h1>Passing dynamic probB and probC:</h1>
    <blog-post :prop-b="post.propB" :prop-c="post.propC"></blog-post>
-   <h1>静态传入probC:</h1>
+   <h1>Passing Static probC:</h1>
    <blog-post prop-c="This is static assignment"></blog-post>
 </div>
 
-<script src="index.js"></script>
+<script type="module" src="index.js"></script>
 
 </html>
