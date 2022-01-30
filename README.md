@@ -15,6 +15,7 @@
 * [组件全局注册](code/intro/comp_global/index.html)
 * [方法](code/option/methods/index.html)
 * [计算属性](code/option/computed/index.html)
+* [props选项](code/option/props/index.html)
 
 # 简介
 ## 声明式渲染
