@@ -16,6 +16,8 @@
 * [方法](code/option/methods/index.html)
 * [计算属性](code/option/computed/index.html)
 * [props选项](code/option/props/index.html)
+* [用emits定义一个组件可以向其父组件触发的事件](code/option/emits/index.html)
+* [配合额外的参数使用$emit](code/inst_methods/emit/index.js)
 
 # 简介
 ## 声明式渲染
@@ -253,4 +255,6 @@ Props是组件暴露的数据接口，用户可以在组件内自定义各种Pro
 
 > 如何关闭firefox的cross origin检测？<br>
   由于使用了`import/export`，在HTML中加载JS文件时需要指定type是module，因此浏览器会报cross origin错误。一个解决办法是通过`python3 -m http.server`起一个server。另一个办法是关闭浏览器的安全检测，火狐浏览器中输入`about:config`，配置如下：about:config -> security.fileuri.strict_origin_policy -> false，[参考网址](https://stackoverflow.com/questions/17088609/disable-firefox-same-origin-policy)
+
+## 非Prop的Attribute
 
