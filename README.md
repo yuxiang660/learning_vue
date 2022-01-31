@@ -19,6 +19,7 @@
 * [修饰符.stop阻止继续冒泡](code/intro/modifier/index.html)
 * [表单数据双向绑定v-model](code/intro/v-model/index.html)
 * [自定义input的双向绑定v-model](code/intro/custom_input/index.html)
+* [动态组件](code/intro/comp_dynamic/index.html)
 * [props选项](code/option/props/index.html)
 * [用emits定义一个组件可以向其父组件触发的事件](code/option/emits/index.html)
 * [实例方法$emit配合额外的参数使用](code/inst_methods/emit/index.js)
@@ -369,8 +370,7 @@ Vue 为最常用的键提供了别名：
 * 其中，`model-value`是CustomInput的prop：`modelValue`
 
 ### 动态组件
-
-
+[动态组件](code/intro/comp_dynamic/index.html)例子展示了动态组件的代码。其中利用了`<component v-bind:is="currentTabComponent" class="tab"></component>`动态控制Tab组件的显示。
 
 # 工具
 ## 单文件组件
