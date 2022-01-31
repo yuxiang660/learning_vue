@@ -1,0 +1,15 @@
+<html>
+
+<head>
+   <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<div id="app">
+   <button @click="go('/')">Home</button>
+   <button @click="go('/about')">About</button>
+   <simple-router :current-route=route />
+</div>
+
+<script src="index.js"></script>
+
+</html>

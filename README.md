@@ -368,6 +368,10 @@ Vue 为最常用的键提供了别名：
 ```
 * 其中，`model-value`是CustomInput的prop：`modelValue`
 
+### 动态组件
+
+
+
 # 工具
 ## 单文件组件
 Vue单文件组件（又名 *.vue 文件，缩写为SFC，single-file-component是一种特殊的文件格式，它允许将 Vue 组件的模板、逻辑与样式封装在单个文件中。
