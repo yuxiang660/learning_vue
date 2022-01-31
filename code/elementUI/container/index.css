@@ -1,0 +1,38 @@
+.el-header,
+.el-footer {
+  background-color: #b3c0d1;
+  color           : red;
+  text-align      : center;
+  line-height     : 60px;
+}
+
+.el-aside {
+  background-color: #d3dce6;
+  color           : yellow;
+  text-align      : center;
+  line-height     : 200px;
+}
+
+.el-main {
+  background-color: #e9eef3;
+  color           : blue;
+  text-align      : center;
+  line-height     : 160px;
+}
+
+.bg-purple-dark {
+  background: #99a9bf;
+}
+
+.bg-purple {
+  background: #d3dce6;
+}
+
+.bg-purple-light {
+  background: #e5e9f2;
+}
+
+.grid-content {
+  border-radius: 4px;
+  min-height   : 36px;
+}
