@@ -261,6 +261,8 @@ Props是组件暴露的数据接口，用户可以在组件内自定义各种Pro
 
 ### 非Prop的Attribute
 一个非prop的attribute是指传向一个组件，但是该组件并没有相应props或emits 定义的attribute。常见的示例包括class、style和id attribute。可以通过`$attrs`property访问那些attribute。
+* [参考网址](https://www.thisdot.co/blog/build-advanced-components-in-vue-3-using-usdattrs)
+
 
 # 工具
 ## 单文件组件
