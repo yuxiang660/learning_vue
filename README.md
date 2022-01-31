@@ -17,8 +17,8 @@
 * [计算属性](code/option/computed/index.html)
 * [props选项](code/option/props/index.html)
 * [用emits定义一个组件可以向其父组件触发的事件](code/option/emits/index.html)
-* [配合额外的参数使用$emit](code/inst_methods/emit/index.js)
-* [$attr测试](code/inst_properties/attrs/index.html)
+* [实例方法$emit配合额外的参数使用](code/inst_methods/emit/index.js)
+* [实例属性$attr测试](code/inst_properties/attrs/index.html)
 
 # 基础
 ## 简介
