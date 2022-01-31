@@ -18,6 +18,7 @@
 * [props选项](code/option/props/index.html)
 * [用emits定义一个组件可以向其父组件触发的事件](code/option/emits/index.html)
 * [配合额外的参数使用$emit](code/inst_methods/emit/index.js)
+* [$attr测试](code/inst_properties/attrs/index.html)
 
 # 基础
 ## 简介
@@ -261,7 +262,10 @@ Props是组件暴露的数据接口，用户可以在组件内自定义各种Pro
 
 ### 非Prop的Attribute
 一个非prop的attribute是指传向一个组件，但是该组件并没有相应props或emits 定义的attribute。常见的示例包括class、style和id attribute。可以通过`$attrs`property访问那些attribute。
-* [参考网址](https://www.thisdot.co/blog/build-advanced-components-in-vue-3-using-usdattrs)
+
+`$attr`包含了父作用域中不作为组件props或自定义事件的attribute绑定和事件。当一个组件没有声明任何prop时，这里会包含所有父作用域的绑定，并且可以通过`v-bind="$attrs"`传入内部组件——这在创建高阶的组件时会非常有用。
+
+例如[$attr测试](code/inst_properties/attrs/index.html)例子中，`comp`组件的`my-attr`属性的内容就可用通过`$attrs['my-attr']`得到。
 
 
 # 工具
