@@ -17,6 +17,7 @@
 * [计算属性](code/option/computed/index.html)
 * [绑定HTML Class](code/intro/class/index.html)
 * [修饰符.stop阻止继续冒泡](code/intro/modifier/index.html)
+* [表单数据双向绑定](code/intro/v-model/index.html)
 * [props选项](code/option/props/index.html)
 * [用emits定义一个组件可以向其父组件触发的事件](code/option/emits/index.html)
 * [实例方法$emit配合额外的参数使用](code/inst_methods/emit/index.js)
@@ -330,6 +331,16 @@ Vue 为最常用的键提供了别名：
 <input @keyup.enter="submit" />
 ```
 
+## 表单输入绑定
+
+### 基础用法
+可以用`v-model`指令在表单`<input>`, `<textarea>`及`<select>`元素上创建双向数据绑定。它会根据控件类型自动选取正确的方法来更新元素。
+`v-model`在内部为不同的输入元素使用不同的property并抛出不同的事件：
+* text和textarea元素使用`value`property和`input`事件
+* checkbox和radio使用`checked`property和`change`事件；
+* select字段将`value`作为property并将`change`作为事件。
+
+[表单数据双向绑定](code/intro/v-model/index.html)例子展示了各种表单的操作。
 
 # 工具
 ## 单文件组件
