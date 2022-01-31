@@ -17,7 +17,8 @@
 * [计算属性](code/option/computed/index.html)
 * [绑定HTML Class](code/intro/class/index.html)
 * [修饰符.stop阻止继续冒泡](code/intro/modifier/index.html)
-* [表单数据双向绑定](code/intro/v-model/index.html)
+* [表单数据双向绑定v-model](code/intro/v-model/index.html)
+* [自定义input的双向绑定v-model](code/intro/custom_input/index.html)
 * [props选项](code/option/props/index.html)
 * [用emits定义一个组件可以向其父组件触发的事件](code/option/emits/index.html)
 * [实例方法$emit配合额外的参数使用](code/inst_methods/emit/index.js)
@@ -343,7 +344,23 @@ Vue 为最常用的键提供了别名：
 [表单数据双向绑定](code/intro/v-model/index.html)例子展示了各种表单的操作。
 
 ## 组件基础
+### 在组件上使用v-model
+对于v-model操作等价于一次绑定操作和一次事件监控，例如下面两个操作是等价的：
+* `<input v-model="searchText" />`
+* `<input :value="searchText" @input="searchText = $event.target.value" />`
 
+`v-model`指令相当于做了：
+* `searchText`和input的`value`属性绑定
+* `searchText`通过`input`事件动作，更新为用户输入
+
+在[自定义input的双向绑定v-model](code/intro/custom_input/index.html)例子中，`<custom-input v-model="searchText"></custom-input>`就等价于：
+```html
+<custom-input
+  :model-value="searchText"
+  @update:model-value="searchText = $event"
+/>
+```
+* 其中，`model-value`是CustomInput的prop：`modelValue`
 
 # 工具
 ## 单文件组件
