@@ -15,6 +15,7 @@
 * [组件全局注册](code/intro/comp_global/index.html)
 * [方法](code/option/methods/index.html)
 * [计算属性](code/option/computed/index.html)
+* [绑定HTML Class](code/intro/class/index.html)
 * [props选项](code/option/props/index.html)
 * [用emits定义一个组件可以向其父组件触发的事件](code/option/emits/index.html)
 * [实例方法$emit配合额外的参数使用](code/inst_methods/emit/index.js)
@@ -242,6 +243,12 @@ const app = Vue.createApp({
 
 ### 侦听器
 计算属性实现了对数据的监听动作，但Vue提供了`watch`选项，一种更通用的响应数据变化的方法。
+
+## Class与Style绑定
+### 绑定HTML Class
+* `<div :class="{ active: isActive }"></div>`
+    * 上面的语法表示`active`这个class存在与否将取决于data property isActive的truthiness
+    * [绑定HTML Class](code/intro/class/index.html)例子中，通过改变`isActive`就可以控制样式切换
 
 # 深入组件
 
