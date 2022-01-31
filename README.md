@@ -344,6 +344,12 @@ Vue 为最常用的键提供了别名：
 [表单数据双向绑定](code/intro/v-model/index.html)例子展示了各种表单的操作。
 
 ## 组件基础
+
+### 使用事件抛出一个值
+`$emit`在子组件中抛出一个事件，并可以带一个参数。通过`$event`在父组件中可以拿到这个参数的值。v-model就是利用这个机制实现的。
+
+在[用emits定义一个组件可以向其父组件触发的事件](code/option/emits/index.html)例子中，WelcomeButton组件通过`$emit('welcome', name)`抛出welcome事件，并带有name参数。因此，可以通过`<welcome-button v-on:welcome="sayHi($event)"></welcome-button>`将name参数的内容，通过`$event`传递给`sayHi`函数。
+
 ### 在组件上使用v-model
 对于v-model操作等价于一次绑定操作和一次事件监控，例如下面两个操作是等价的：
 * `<input v-model="searchText" />`
