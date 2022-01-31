@@ -342,6 +342,9 @@ Vue 为最常用的键提供了别名：
 
 [表单数据双向绑定](code/intro/v-model/index.html)例子展示了各种表单的操作。
 
+## 组件基础
+
+
 # 工具
 ## 单文件组件
 Vue单文件组件（又名 *.vue 文件，缩写为SFC，single-file-component是一种特殊的文件格式，它允许将 Vue 组件的模板、逻辑与样式封装在单个文件中。
