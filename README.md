@@ -16,6 +16,7 @@
 * [方法](code/option/methods/index.html)
 * [计算属性](code/option/computed/index.html)
 * [绑定HTML Class](code/intro/class/index.html)
+* [修饰符.stop阻止继续冒泡](code/intro/modifier/index.html)
 * [props选项](code/option/props/index.html)
 * [用emits定义一个组件可以向其父组件触发的事件](code/option/emits/index.html)
 * [实例方法$emit配合额外的参数使用](code/inst_methods/emit/index.js)
@@ -280,7 +281,54 @@ Props是组件暴露的数据接口，用户可以在组件内自定义各种Pro
 ## 事件处理
 `v-on`指令用于监听DOM事件。如果需要在内联语句处理器中访问原始的DOM事件，可以用特殊变量`$event`把它传入方法。
 ### 事件修饰符
+修饰符是由点开头的指令后缀来表示的，用于修饰原生的DOM事件(.once也能用在自定义事件上)，常见的修饰符有：
+* .stop
+* .prevent
+* .capture
+* .self
+* .once
+* .passive
 
+```html
+<!-- 阻止单击事件继续冒泡 -->
+<a @click.stop="doThis"></a>
+
+<!-- 提交事件不再重载页面 -->
+<form @submit.prevent="onSubmit"></form>
+
+<!-- 修饰符可以串联 -->
+<a @click.stop.prevent="doThat"></a>
+
+<!-- 只有修饰符 -->
+<form @submit.prevent></form>
+
+<!-- 添加事件监听器时使用事件捕获模式 -->
+<!-- 即内部元素触发的事件先在此处理，然后才交由内部元素进行处理 -->
+<div @click.capture="doThis">...</div>
+
+<!-- 只当在 event.target 是当前元素自身时触发处理函数 -->
+<!-- 即事件不是从内部元素触发的 -->
+<div @click.self="doThat">...</div>
+```
+
+例子[修饰符.stop阻止继续冒泡](code/intro/modifier/index.html)中，在按钮click动作上加上`.stop`修饰符，阻止了起继续将单击事件冒泡，从而不会连续弹窗。
+
+### 按键修饰符
+Vue 为最常用的键提供了别名：
+* .enter
+* .tab
+* .delete (捕获“删除”和“退格”键)
+* .esc
+* .space
+* .up
+* .down
+* .left
+* .right
+
+```html
+<!-- 只有在 `key` 是 `Enter` 时调用 `vm.submit()` -->
+<input @keyup.enter="submit" />
+```
 
 
 # 工具
