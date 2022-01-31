@@ -3,6 +3,12 @@ const App = {
       return {
          seen: true
       }
+   },
+   methods: {
+      toggleSeen()
+      {
+         this.seen = !this.seen
+      }
    }
 }
 

@@ -5,7 +5,9 @@
 </head>
 
 <div id="conditional-rendering">
-   <span v-if="seen">现在你看到我了</span>
+   <span v-if="seen">You can see me</span>
+   <span v-else>Cannot see</span>
+   <button @click='toggleSeen'>Click</button>
 </div>
 
 <script src="index.js"></script>

@@ -274,6 +274,11 @@ Props是组件暴露的数据接口，用户可以在组件内自定义各种Pro
 
 例如[$attr测试](code/inst_properties/attrs/index.html)例子中，`comp`组件的`my-attr`属性的内容就可用通过`$attrs['my-attr']`得到。
 
+## 条件渲染
+`v-if`指令用于条件性地渲染一块内容，这块内容只会在指令的表达式返回truthy值的时候被渲染。参加例子[条件v-if](code/intro/v-if/index.html)。
+
+## 事件处理
+
 
 # 工具
 ## 单文件组件
