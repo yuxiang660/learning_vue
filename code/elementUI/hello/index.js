@@ -8,4 +8,4 @@ const HelloVueApp = {
 
 const app = Vue.createApp(HelloVueApp);
 app.use(ElementPlus);
-const vm = app.mount('#hello-element')
+const vm = app.mount('#app')
