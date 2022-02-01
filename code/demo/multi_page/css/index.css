@@ -1,0 +1,39 @@
+@import 'common.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'home.css';
+
+body {
+   margin : 0px;
+   padding: 0px;
+}
+
+.vroot .el-header {
+   background-color    : #ffa724;
+   /* flex layout https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html */
+   display             : flex;
+   align-items         : center;
+   justify-content     : left;
+   height              : auto;
+}
+
+.vroot .el-aside {
+   background-color: white;
+   text-align      : left;
+   padding         : 0px;
+   margin          : 10px;
+}
+
+.vroot .el-main {
+   background-color: #e9eef3;
+   text-align      : center;
+   height          : auto;
+   min-height      : 400pt;
+}
+
+.vroot .el-footer {
+   background-color: black;
+   color           : white;
+   text-align      : right;
+   height          : auto;
+}
