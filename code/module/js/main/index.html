@@ -1,0 +1,17 @@
+<html>
+
+<head>
+   <link rel="stylesheet" href="../../css/main.css">
+   <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<div id="app">
+   <root />
+</div>
+
+<script type="module">
+   import vMain from './index.js'
+   Vue.createApp({}).component('root', vMain).mount('#app')
+</script>
+
+</html>
