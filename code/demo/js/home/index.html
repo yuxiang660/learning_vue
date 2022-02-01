@@ -5,13 +5,15 @@
    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
-<div id="app">
-   <root />
-</div>
+<body>
+   <div id="app">
+      <root />
+   </div>
 
-<script type="module">
-   import vHome from './index.js'
-   Vue.createApp({}).component('root', vHome).mount('#app')
-</script>
+   <script type="module">
+      import vHome from './index.js'
+      Vue.createApp({}).component('root', vHome).mount('#app')
+   </script>
+</body>
 
 </html>

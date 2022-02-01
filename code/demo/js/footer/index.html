@@ -5,13 +5,15 @@
    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
-<div id="app">
-   <root />
-</div>
+<body>
+   <div id="app">
+      <root />
+   </div>
 
-<script type="module">
-   import vFooter from './index.js'
-   Vue.createApp({}).component('root', vFooter).mount('#app')
-</script>
+   <script type="module">
+      import vFooter from './index.js'
+      Vue.createApp({}).component('root', vFooter).mount('#app')
+   </script>
+</body>
 
 </html>

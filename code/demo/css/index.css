@@ -3,8 +3,13 @@
 @import 'footer.css';
 @import 'home.css';
 
+body {
+   margin : 0px;
+   padding: 0px;
+}
+
 .vroot .el-header {
-   background-color: #b3c0d1;
+   background-color: #ffa724;
    text-align      : center;
    height          : auto;
 }
@@ -16,7 +21,8 @@
 }
 
 .vroot .el-footer {
-   background-color: grey;
+   background-color: black;
+   color           : white;
    text-align      : center;
    height          : auto;
 }
