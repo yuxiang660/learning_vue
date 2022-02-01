@@ -1,0 +1,22 @@
+@import 'common.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'home.css';
+
+.vroot .el-header {
+   background-color: #b3c0d1;
+   text-align      : center;
+   height          : auto;
+}
+
+.vroot .el-main {
+   background-color: #e9eef3;
+   text-align      : center;
+   height          : auto;
+}
+
+.vroot .el-footer {
+   background-color: grey;
+   text-align      : center;
+   height          : auto;
+}
