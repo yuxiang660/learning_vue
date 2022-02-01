@@ -1,7 +1,7 @@
-import Root from './src/index.js'
+import vRoot from './js/index.js'
 
 Vue.createApp({})
-   .component('root', Root)
+   .component('root', vRoot)
    .mount('#app')
 
 
