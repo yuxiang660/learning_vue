@@ -1,16 +1,16 @@
 import vHeader from './header/index.js'
-import vMain from './main/index.js'
+import vHome from './home/index.js'
 
 const vRoot = {
    components: {
       'vheader': vHeader,
-      'vmain': vMain
+      'vhome': vHome
    },
    template: `
       <div>
          <p class='vroot'>This is Root which has Header</p>
          <vheader />
-         <vmain />
+         <vhome />
       </div>
    `
 }

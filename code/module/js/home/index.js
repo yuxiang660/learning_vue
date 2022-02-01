@@ -1,13 +1,13 @@
 import vCommon from "../common/index.js"
 
-const vMain = {
+const vHome = {
    components : {
       'icommon': vCommon
    },
    template: `
-      <p class='vmain'>This is Main which has Common</p>
+      <p class='vhome'>This is Home which has Common</p>
       <icommon />
    `
 }
 
-export default vMain;
+export default vHome;
