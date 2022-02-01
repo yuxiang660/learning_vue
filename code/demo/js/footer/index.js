@@ -1,12 +1,9 @@
-import vCommon from "../common/index.js"
-
 const vFooter = {
-   components : {
-      'vcommon': vCommon
-   },
+   props: ['footer'],
    template: `
-      <p class='vfooter'>This is Footer which has Common</p>
-      <vcommon />
+      <div class='vfooter'>
+         <p>{{ footer }}</p>
+      </div>
    `
 }
 
