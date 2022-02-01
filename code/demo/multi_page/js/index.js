@@ -9,7 +9,7 @@ const vAside = {
    template: `
       <el-menu>
          <template v-for="(route, i) in routes">
-            <el-menu-item :index="route" @click="$emit('click', route)">{{ route }}</el-menu-item>
+            <el-menu-item :index="i" @click="$emit('click', route)">{{ route }}</el-menu-item>
          </template>
       </el-menu>
    `
