@@ -13,7 +13,7 @@ body {
    /* flex layout https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html */
    display             : flex;
    align-items         : center;
-   justify-content     : left;
+   justify-content     : flex-start;
    height              : 50px;
 }
 
@@ -36,6 +36,6 @@ body {
    color           : white;
    display         : flex;
    align-items     : center;
-   justify-content : right;
+   justify-content : flex-end;
    height          : 50px;
 }
