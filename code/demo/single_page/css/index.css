@@ -14,18 +14,20 @@ body {
    display             : flex;
    align-items         : center;
    justify-content     : left;
-   height              : auto;
+   height              : 50px;
 }
 
 .vroot .el-main {
    background-color: #e9eef3;
    text-align      : center;
-   height          : auto;
+   height          : 500px;
 }
 
 .vroot .el-footer {
    background-color: black;
    color           : white;
-   text-align      : right;
-   height          : auto;
+   display         : flex;
+   align-items     : center;
+   justify-content : right;
+   height          : 50px;
 }
