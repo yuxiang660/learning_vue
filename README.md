@@ -22,6 +22,7 @@
 * [动态组件](code/intro/comp_dynamic/index.html)
 * [Slot基本功能](code/slot/basic/index.html)
 * [Slot渲染作用域](code/slot/scope/index.html)
+* [Slot具名slots](code/slot/named/index.html)
 * [props选项](code/option/props/index.html)
 * [用emits定义一个组件可以向其父组件触发的事件](code/option/emits/index.html)
 * [实例方法$emit配合额外的参数使用](code/inst_methods/emit/index.js)
