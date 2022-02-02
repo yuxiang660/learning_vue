@@ -1,10 +1,19 @@
 const TodoButton = {
+   props: ['action'],
    template: `
-      <button><slot>DefaultText</slot></button>
+      <div>Prop: {{action}}</div>
+      <button>
+         <slot></slot>
+      </button>
    `
 }
 
 const RootComponent = {
+   data() {
+      return {
+         message: 'text'
+      }
+   },
    components: {
       'todo-button': TodoButton
    }
