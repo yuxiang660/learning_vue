@@ -20,6 +20,7 @@
 * [表单数据双向绑定v-model](code/intro/v-model/index.html)
 * [自定义input的双向绑定v-model](code/intro/custom_input/index.html)
 * [动态组件](code/intro/comp_dynamic/index.html)
+* [Slot基本功能](code/slot/basic/index.html)
 * [props选项](code/option/props/index.html)
 * [用emits定义一个组件可以向其父组件触发的事件](code/option/emits/index.html)
 * [实例方法$emit配合额外的参数使用](code/inst_methods/emit/index.js)
