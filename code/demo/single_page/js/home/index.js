@@ -22,7 +22,6 @@ const vHome = {
                   :rows="19"
                   type="textarea"
                   placeholder=""
-                  disabled
                />
             </el-col>
          </el-row>
